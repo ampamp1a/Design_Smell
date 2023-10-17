@@ -75,7 +75,7 @@ class TicTacToe
     
         [diagonal1, diagonal2].any? { |diag| diag.uniq.length == 1 && !diag[0].nil? }
       end
-       
+
       def translate_move(move)
         [move[0].ord - 'A'.ord, move[1].ord - 'D'.ord]
       end
@@ -85,7 +85,7 @@ class TicTacToe
       end
   
       def make_blanks(val)
-        val.nil? ? " " : val
+        val.nil? ? "_" : val
       end
     end
   
