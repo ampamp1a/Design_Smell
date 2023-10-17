@@ -8,6 +8,7 @@ class TicTacToe
   
       def make_move(board)
         loop do
+          puts player_prompt
           move = gets.chomp.upcase
           if valid_move?(move) && board.place_move(move, symbol)
             break
@@ -16,8 +17,12 @@ class TicTacToe
           end
         end
       end
-  
+
       private
+
+      def player_prompt
+        "It's #{symbol}'s turn: "
+      end
   
       def valid_move?(move)
         move.match?(/^[A-C][D-F]$/)
